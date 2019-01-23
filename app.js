@@ -1,12 +1,15 @@
 import classPP from "./class_pp.js";
-import util from "./util.js";
-class Dict extends classPP.Private {
+class Dict extends classPP.Private2() {
     constructor() {
         super();
         this.init();
     }
     init() {
+        if (this.private.initialized) return null;
         this.private.data = {};
+        this.private.initialized = true;
+        //this.private.* is only accessable from within class functions.
+        //so Dict.private.data
     }
     get(key) {
         return this.private.data[key];
@@ -17,5 +20,4 @@ class Dict extends classPP.Private {
 }
 
 window.d = new Dict();
-// for testing :)
 export {}
