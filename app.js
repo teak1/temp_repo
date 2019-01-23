@@ -17,6 +17,5 @@ class Dict extends classPP.Private {
 }
 
 window.d = new Dict();
-// window.ClassPP = classPP.ClassPP;
-// window.a = new(window.ClassPP);
+// for testing :)
 export {}
